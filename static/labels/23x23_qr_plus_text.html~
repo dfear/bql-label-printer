@@ -1,0 +1,10 @@
+<div class="center" style="width: 202px; height:202px;">
+    <div class="qrcode input" style="width: 154.591836734694px;" data-value="invID"></div>
+    <div class="single center" style="height: 57.4081632653061px; font-weight: normal;">
+        <span class="input">invID</span>
+    </div>
+</div>
+
+
+
+
