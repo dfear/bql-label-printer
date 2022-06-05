@@ -147,6 +147,6 @@ $(document).ready(function(){
   $("textarea:first").keyup(function(){
     //invIDval = $("#invID").val();
     //$("#invID2").val($invIDval);
-    $("textarea:second").val($("textarea:first").val());
+    $("textarea:nth-of-type(2)").val($("textarea:first").val());
   });
 });
