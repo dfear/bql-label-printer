@@ -137,7 +137,7 @@ button.onclick = function () {
  */
 $(document).ready(function(){
   $("#invID").keyup(function(){
-    //invIDval = $("#invID").val();
+  	//invIDval = $("#invID").val();
     //$("#invID2").val($invIDval);
     $("#invID2").val($("#invID").val());
   });
