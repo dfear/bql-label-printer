@@ -142,3 +142,11 @@ $(document).ready(function(){
     $("#invID2").val($("#invID").val());
   });
 });
+
+$(document).ready(function(){
+  $("textarea:first").keyup(function(){
+    //invIDval = $("#invID").val();
+    //$("#invID2").val($invIDval);
+    $("textarea:second").val($("textarea:first").val());
+  });
+});
