@@ -1,10 +1,10 @@
 <div class="center" style="width: 202px; height:202px;">
     <!--<div class="qrcode input" style="width: 165px;" data-value="invID"></div>-->
     <div class="single" style="margin-left:15px; width: 155px;" >
-      <div class="qrcode input" data-value="invID"></div>
+      <div id="invID" class="qrcode input" data-value="invID"></div>
     </div>
     <div class="single center" style="margin-left: -5px; height: 45px; font-size: 45px; font-weight: normal;">
-        <span class="input">invID</span>
+        <span id="invID2" class="input" disabled>invID2</span>
     </div>
 </div>
 
