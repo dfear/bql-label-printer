@@ -53,13 +53,17 @@ function buildForm() {
                 input.dataset.value = inp.value;
                 if (input.qrcode) {
                     input.qrcode.makeCode(inp.value);
+                    //input.innerText = form.getElementsByTagName("textarea")[1].value;
+                    inputs[1].innerText = form.getElementsByTagName("textarea")[0].value;
                 }
+                //input.innerText = form.getElementsByTagName("textarea")[1].value;
             };
         } else {
             inp.placeholder = input.innerText;
             inp.oninput = function () {
                 input.innerText = inp.value;
             };
+            inp.setAttribute("disabled","disabled");
         }
         form.appendChild(inp);
     }
@@ -135,6 +139,7 @@ button.onclick = function () {
 /**
  * Copy #invID to #invID2
  */
+/*
 $(document).ready(function(){
   $("#invID").keyup(function(){
     //invIDval = $("#invID").val();
@@ -142,7 +147,9 @@ $(document).ready(function(){
     $("#invID2").val($("#invID").val());
   });
 });
+*/
 
+/*
 $(document).ready(function(){
   $("textarea:first").keyup(function(){
     //invIDval = $("#invID").val();
@@ -150,3 +157,16 @@ $(document).ready(function(){
     $("textarea:nth-of-type(2)").val($("textarea:first").val());
   });
 });
+*/
+
+$(document).ready(function(){
+  $("#form > textarea:nth-child(1)").keyup(function(){
+    //invIDval = $("#invID").val();
+    //$("#invID2").val($invIDval);
+    $("#form > textarea:nth-child(2)").val($("#form > textarea:nth-child(1)").val());
+  });
+});
+  
+  
+  
+//#form > textarea:nth-child(2)
