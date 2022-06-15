@@ -67,6 +67,11 @@ function buildForm() {
         }
         form.appendChild(inp);
     }
+
+    let inp = document.createElement("INPUT");
+    inp.setAttribute("type", "number");
+    inp.placeholder = "num copies";
+    form.appendChild(inp);
 }
 
 /**

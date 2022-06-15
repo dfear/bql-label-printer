@@ -63,10 +63,15 @@ function buildForm() {
             inp.oninput = function () {
                 input.innerText = inp.value;
             };
-            inp.setAttribute("disabled"."disabled");
+            inp.setAttribute("disabled","disabled");
         }
         form.appendChild(inp);
     }
+    
+    let inp = document.createElement("INPUT");
+    inp.setAttribute("type", "number");
+    inp.placeholder = "num copies";
+    form.appendChild(inp);
 }
 
 /**
