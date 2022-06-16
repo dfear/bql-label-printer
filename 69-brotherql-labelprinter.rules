@@ -1,0 +1,18 @@
+# udev rules for Brother QL label printers using usb
+
+# Installation:
+# - Copy this file to /etc/udev/rules.d/
+# - Run the command:
+#       udevadm control --reload && udevadm trigger
+
+ACTION!="add|change", GOTO="brotherql_rules_end"
+SUBSYSTEM!="usb|usbmisc", GOTO="brotherql_rules_end"
+
+# QL-1100
+# 04f9:20a7
+# use your printer's VID/PID here
+# QL-500
+# 04f9:2015
+ATTRS{idVendor}=="04f9", ATTRS{idProduct}=="2015", TAG+="uaccess"
+
+LABEL="brotherql_rules_end"

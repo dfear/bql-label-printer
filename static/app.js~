@@ -107,7 +107,6 @@ button.onclick = function () {
     const node = wrapper.querySelector(':first-child');
     const copies = form.querySelector(':last-child')
     console.log(node);
-    console.log(copies);
     domtoimage.toBlob(node)
         .then(function (blob) {
             const fd = new FormData();

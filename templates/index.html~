@@ -36,9 +36,9 @@
 
 </main>
 
-<script src="{{ url_for('static', filename='jquery-3.6.0.min.js') }}"></script>
 <script src="{{ url_for('static', filename='dom-to-image-more.min.js') }}"></script>
 <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
 <script src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
 </body>
 </html>
