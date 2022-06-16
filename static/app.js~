@@ -67,7 +67,7 @@ function buildForm() {
         }
         form.appendChild(inp);
     }
-    
+
     let inp = document.createElement("INPUT");
     inp.setAttribute("type", "number");
     inp.placeholder = "num copies";
@@ -105,14 +105,16 @@ function getSize() {
 button.onclick = function () {
     //const node = document.getElementById('label');
     const node = wrapper.querySelector(':first-child');
+    const copies = form.querySelector(':last-child')
     console.log(node);
     domtoimage.toBlob(node)
         .then(function (blob) {
             const fd = new FormData();
             fd.append('data', blob);
             fd.append('size', getSize());
+            fd.append('copies', copies.value);
 
-            return fetch('/print', {
+            return fetch('/print-multi', {
                 method: 'POST',
                 body: fd
             });
@@ -140,38 +142,3 @@ button.onclick = function () {
         });
     */
 };
-
-/**
- * Copy #invID to #invID2
- */
-/*
-$(document).ready(function(){
-  $("#invID").keyup(function(){
-    //invIDval = $("#invID").val();
-    //$("#invID2").val($invIDval);
-    $("#invID2").val($("#invID").val());
-  });
-});
-*/
-
-/*
-$(document).ready(function(){
-  $("textarea:first").keyup(function(){
-    //invIDval = $("#invID").val();
-    //$("#invID2").val($invIDval);
-    $("textarea:nth-of-type(2)").val($("textarea:first").val());
-  });
-});
-*/
-
-$(document).ready(function(){
-  $("#form > textarea:nth-child(1)").keyup(function(){
-    //invIDval = $("#invID").val();
-    //$("#invID2").val($invIDval);
-    $("#form > textarea:nth-child(2)").val($("#form > textarea:nth-child(1)").val());
-  });
-});
-  
-  
-  
-//#form > textarea:nth-child(2)
