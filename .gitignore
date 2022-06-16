@@ -1,1 +1,6 @@
 env/
+# Backup files
+*~
+
+# temp files
+.~*
