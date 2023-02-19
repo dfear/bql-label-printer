@@ -63,7 +63,9 @@ function buildForm() {
             inp.oninput = function () {
                 input.innerText = inp.value;
             };
-            inp.setAttribute("disabled","disabled");
+            if (inp.hasAttribute('data-isDisabled')) {
+                inp.setAttribute("disabled","disabled");
+            };
         }
         form.appendChild(inp);
     }
